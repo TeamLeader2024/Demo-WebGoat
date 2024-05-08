@@ -1,0 +1,19 @@
+yaml
+name: Vulnerability scan
+
+on: []
+
+jobs:
+
+  vulnerabilities-scan:
+
+runs-on: ubuntu-latest
+
+steps:
+- uses: actions/checkout@v2
+
+- uses: debricked/action/scan@v1
+
+env:
+Debricked_Token: ${{ secrets.Debricked_Token}}
+  
